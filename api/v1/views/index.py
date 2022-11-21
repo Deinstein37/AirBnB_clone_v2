@@ -12,9 +12,9 @@ def status():
     return (jsonify({"status": "OK"}))
 
 
-@app_views.route('/stats', strict_slashes=False)
-def stats():
-    ''' Returns the stats '''
+@app_views.route('/api/v1/stats')
+def show_count():
+    new_dict = {
     return jsonify({"amenities": storage.count("Amenity"),
                     "cities": storage.count("City"),
                     "places": storage.count("Place"),
