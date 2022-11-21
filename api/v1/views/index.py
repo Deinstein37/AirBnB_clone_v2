@@ -22,3 +22,5 @@ def show_count():
                     "states": storage.count("State"),
                     "users": storage.count("User")
                     })
+ }
+    return jsonify(new_dict)
